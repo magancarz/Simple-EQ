@@ -5,7 +5,7 @@
     <PLUGIN name="Audio Input" descriptiveName="" format="Internal" category="I/O devices"
             manufacturer="JUCE" version="1.0" file="" uniqueId="246006c0"
             isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="0"
-            numOutputs="8" isShell="0" hasARAExtension="0" uid="246006c0"/>
+            numOutputs="2" isShell="0" hasARAExtension="0" uid="246006c0"/>
     <STATE>0.</STATE>
     <LAYOUT>
       <INPUTS>
@@ -39,7 +39,7 @@
     <STATE>0.</STATE>
     <LAYOUT>
       <INPUTS>
-        <BUS index="0" layout="L R C Lfe Lss Rss Lrs Rrs"/>
+        <BUS index="0" layout="L R"/>
       </INPUTS>
       <OUTPUTS>
         <BUS index="0" layout="disabled"/>
@@ -61,25 +61,8 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <FILTER uid="5" x="0.4675" y="0.4717741935483871" useARA="0" uiLastX_Normal="175"
-          uiLastY_Normal="133" uiopen_Normal="0">
-    <PLUGIN name="SimpleEQ" format="VST3" category="Fx" manufacturer="yourcompany"
-            version="1.0.0" file="C:\dev\SimpleEQ\Builds\VisualStudio2022\x64\Debug\VST3\SimpleEQ.vst3"
-            uniqueId="f89dd329" isInstrument="0" fileTime="18476035924" infoUpdateTime="1847616e8d2"
-            numInputs="2" numOutputs="2" isShell="0" hasARAExtension="0"
-            uid="e9562736"/>
-    <STATE>191.VMjLgXK....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9XCLt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9..</STATE>
-    <LAYOUT>
-      <INPUTS>
-        <BUS index="0" layout="L R"/>
-      </INPUTS>
-      <OUTPUTS>
-        <BUS index="0" layout="L R"/>
-      </OUTPUTS>
-    </LAYOUT>
-  </FILTER>
-  <FILTER uid="13" x="0.48125" y="0.2600806451612903" useARA="0" uiLastX_Normal="604"
-          uiLastY_Normal="190" uiopen_Normal="0">
+  <FILTER uid="13" x="0.48125" y="0.2600806451612903" useARA="0" uiLastX_Normal="837"
+          uiLastY_Normal="193" uiopen_Normal="0">
     <PLUGIN name="AudioPluginDemo" format="Internal" category="Effect" manufacturer="JUCE"
             version="1.0.0" file="AudioPluginDemo" uniqueId="4d00ec0c" isInstrument="0"
             fileTime="0" infoUpdateTime="0" numInputs="2" numOutputs="2"
@@ -94,8 +77,25 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <CONNECTION srcFilter="5" srcChannel="0" dstFilter="3" dstChannel="0"/>
-  <CONNECTION srcFilter="5" srcChannel="1" dstFilter="3" dstChannel="1"/>
-  <CONNECTION srcFilter="13" srcChannel="0" dstFilter="5" dstChannel="0"/>
-  <CONNECTION srcFilter="13" srcChannel="1" dstFilter="5" dstChannel="1"/>
+  <FILTER uid="14" x="0.32" y="0.4375" useARA="0" uiLastX_Normal="290"
+          uiLastY_Normal="172" uiopen_Normal="0">
+    <PLUGIN name="SimpleEQ" format="VST3" category="Fx" manufacturer="yourcompany"
+            version="1.0.0" file="C:\dev\SimpleEQ\Builds\VisualStudio2022\x64\Debug\VST3\SimpleEQ.vst3"
+            uniqueId="f89dd329" isInstrument="0" fileTime="184809a76b4" infoUpdateTime="1848faa18aa"
+            numInputs="2" numOutputs="2" isShell="0" hasARAExtension="0"
+            uid="e9562736"/>
+    <STATE>191.VMjLgXK....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9XCLt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9..</STATE>
+    <LAYOUT>
+      <INPUTS>
+        <BUS index="0" layout="L R"/>
+      </INPUTS>
+      <OUTPUTS>
+        <BUS index="0" layout="L R"/>
+      </OUTPUTS>
+    </LAYOUT>
+  </FILTER>
+  <CONNECTION srcFilter="13" srcChannel="0" dstFilter="14" dstChannel="0"/>
+  <CONNECTION srcFilter="13" srcChannel="1" dstFilter="14" dstChannel="1"/>
+  <CONNECTION srcFilter="14" srcChannel="0" dstFilter="3" dstChannel="0"/>
+  <CONNECTION srcFilter="14" srcChannel="1" dstFilter="3" dstChannel="1"/>
 </FILTERGRAPH>
